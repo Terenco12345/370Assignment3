@@ -30,11 +30,11 @@ def show_info(pid):
     # subprocess.run(['ls', '-l', '/proc/{}/map_files'.format(pid)])
 
 big_list = []
-LIST_INCREMENT = 10000000
+LIST_INCREMENT=10000000
 up_to = 0
 my_pid = os.getpid()
 show_info(my_pid)
-for i in range(9):
+for i in range(20):
     big_list += list(range(up_to, up_to + LIST_INCREMENT))
     show_info(my_pid)
     print("subprocess completed")
